@@ -1,5 +1,10 @@
 {
   "name": "Rails-Seven-Seas",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "boostrap": "^2.0.0",
+    "bootstrap": "4.4",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.1"
+  }
 }

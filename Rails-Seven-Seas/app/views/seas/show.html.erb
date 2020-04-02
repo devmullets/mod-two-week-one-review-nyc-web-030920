@@ -1,0 +1,18 @@
+<center>
+<img src="<%=@sea.image_url%>" >
+<h1><%=@sea.name %></h1>
+<p><%=@sea.bio%></p>
+<%# edit %>
+<%# back %>
+
+<table>
+    <tr><td>Temperature: <%=@sea.temperature%> F</td></tr>
+    <tr><td>Favorite Color: <%=@sea.favorite_color%></td></tr>
+    <tr><td>Scariest Creature: <%=@sea.scariest_creature%></td></tr>
+    <tr><td>Mood: <%=@sea.mood%></td></tr>
+        <% if @sea.has_mermaids%>
+            <tr><td>Has mermaids</td></tr>
+        <% end %>
+</table>
+
+</center>

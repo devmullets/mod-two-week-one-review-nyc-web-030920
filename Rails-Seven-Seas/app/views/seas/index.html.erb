@@ -1,0 +1,15 @@
+<center>
+<h1>7 Seas</h1>
+<p><%= link_to "Add a Sea", "/seas/new"%></p>
+
+
+<% @seas.each do |sea| %>
+    <div>
+        <img src="<%=sea.image_url%>%">
+        <h3><%=sea.name%></h3>
+        <p><%=sea.bio%></p>
+        <%= link_to "View Location", "/seas/#{sea.id}"%>
+    </div>
+<% end %>
+
+</center>

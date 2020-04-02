@@ -1,5 +1,29 @@
 class SeasController < ApplicationController
   #define your controller actions here
+  def index
+    @seas = Sea.all
+
+    render :index 
+  end 
+
+  def new
+    @sea = Sea.new
+
+    render :new
+  end
+
+  def create
+    @sea = Sea.create(sea_params)
+
+    # render :new
+  end 
+
+  def show
+    @sea = Sea.find(params[:id])
+
+    render :show
+  end 
+
 
 
   private
@@ -11,3 +35,4 @@ class SeasController < ApplicationController
   end
 
 end
+
