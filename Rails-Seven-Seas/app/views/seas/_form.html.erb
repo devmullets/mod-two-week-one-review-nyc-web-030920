@@ -1,0 +1,45 @@
+
+  <div class='col-md-6'>
+    <%= form_with(model: @sea, local: true) do |f| %>
+      <div class="form-group">
+        <%= f.label :name, "Name:" %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :temperature, "Temperature:" %>
+        <%= f.number_field :temperature, class:'form-control' %>
+      </div>
+      <div class='form-group'>
+        <%= f.label :bio %>
+        <%= f.text_area :bio, class: 'form-control' %>
+      </div>
+      <div class='form-group'>
+        <%= f.label :image_url %>
+        <%= f.text_field :image_url, class: 'form-control'  %>
+      </div>
+      <div class='form-group'>
+        <%= f.label :mood %>
+        <%= f.text_field :mood, class: 'form-control'  %>
+      </div>
+      <div class='form-group'>
+        <%= f.label :favorite_color %>
+        <%= f.text_field :favorite_color, class: 'form-control'  %>
+      </div>
+      <div class='form-group'>
+        <%= f.label :scariest_creature %>
+        <%= f.text_field :scariest_creature, class: 'form-control'  %>
+      </div>
+      <div class='form-group'>
+        <%= f.check_box :has_mermaids, class: 'form-check-input'  %>
+        <%= f.label :has_mermaids %>
+      </div>
+      <div class='form-group'>
+        <%=  f.submit "Submit", class: 'btn btn-primary btn-lg' %>
+        <%=  link_to "Cancel", seas_path, class: 'btn btn-danger btn-lg' %>
+      </div>
+      <% end %>
+
+  </div>
+
+
+

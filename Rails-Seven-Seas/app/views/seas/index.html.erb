@@ -1,15 +1,23 @@
-<center>
-<h1>7 Seas</h1>
-<p><%= link_to "Add a Sea", "/seas/new"%></p>
-
-
-<% @seas.each do |sea| %>
-    <div>
-        <img src="<%=sea.image_url%>%">
-        <h3><%=sea.name%></h3>
-        <p><%=sea.bio%></p>
-        <%= link_to "View Location", "/seas/#{sea.id}"%>
+<div class="container">
+    <div class="text-center">
+        <h1 class="text-center">7 Seas</h1>
+            <%= link_to "Add a Sea", new_sea_path, :class => "btn btn-info"%>
     </div>
-<% end %>
+<p></p>
+<div class="row row-cols-2 row-cols-md-2">
+    <% @seas.each do |sea| %>
+        <div class="col-md-6 text-center ">
+            <div class="card">
+                <div class="card-body">
+                    <img src="<%=sea.image_url%>%" class="card-img-top img-thumbnail">
+                    <h4 class="card-title text-center"><%=sea.name%></h4>
+                    <p class="card-text" style="height: 10rem"><%=sea.bio%></p>
+                    <%= link_to "View Location", "/seas/#{sea.id}", :class => "btn btn-info"%>
+                </div>
+            </div>
+        </div>
 
-</center>
+    <% end %>
+</div>
+
+</div>
